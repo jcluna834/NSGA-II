@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D19D0531-1D95-4017-BE17-4B0D0CBDE164}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TercerCorteMH2</RootNamespace>
+    <AssemblyName>TercerCorteMH2</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstract\Algoritmo.cs" />
+    <Compile Include="Abstract\Cruce.cs" />
+    <Compile Include="Abstract\Mutacion.cs" />
+    <Compile Include="Abstract\PaisajeAptitud.cs" />
+    <Compile Include="Abstract\Reemplazo.cs" />
+    <Compile Include="Abstract\Seleccion.cs" />
+    <Compile Include="Algortimo\NSGAII.cs" />
+    <Compile Include="Archivo\Archivo.cs" />
+    <Compile Include="fxCruce\Combinado.cs" />
+    <Compile Include="fxCruce\DeNPuntos.cs" />
+    <Compile Include="fxCruce\DeUnPunto.cs" />
+    <Compile Include="fxCruce\Uniforme.cs" />
+    <Compile Include="fxMutacion\Intercambio.cs" />
+    <Compile Include="fxObjetivo\fxAgenteViajero.cs" />
+    <Compile Include="fxReemplazo\Aleatorio.cs" />
+    <Compile Include="fxReemplazo\DelPeor.cs" />
+    <Compile Include="fxReemplazo\RxTorneo.cs" />
+    <Compile Include="fxSeleccion\Elitismo.cs" />
+    <Compile Include="fxSeleccion\Ruleta.cs" />
+    <Compile Include="fxSeleccion\SxTorneo.cs" />
+    <Compile Include="Individuos\Individuo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
